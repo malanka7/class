@@ -1,4 +1,3 @@
-# This is a basic workflow to help you get started with Actions
 
 name: CI
 
@@ -35,6 +34,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Initialize
+        working-directory: vpc
         run: |
           terraform init
 
@@ -43,6 +43,7 @@ jobs:
           terraform validate
       
       - name: apply
+        working-directory: vpc
         run: |
           terraform apply -auto-approve
           
