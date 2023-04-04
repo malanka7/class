@@ -39,6 +39,7 @@ jobs:
           terraform init
 
       - name: Validate
+        working-directory: vpc
         run: |
           terraform validate
       
