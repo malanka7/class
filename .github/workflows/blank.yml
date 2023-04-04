@@ -28,7 +28,11 @@ jobs:
 
 
       # Runs a set of commands using the runners shell
-      - name: Execute My Code
+      - name: Initialize
         run: |
-          echo Hello
-          echo World
+          terraform init
+
+      - name: Validate
+        run: |
+          terraform validate
+          
